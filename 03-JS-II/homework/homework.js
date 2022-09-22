@@ -200,6 +200,7 @@ function esPrimo(numero) {
     if(numero % i === 0) {
       return false;
     }
+  }
   if (numero < 2) {
     return false;
   }
@@ -258,4 +259,4 @@ module.exports = {
   tablaDelSeis,
   tieneTresDigitos,
   doWhile
-};
+}

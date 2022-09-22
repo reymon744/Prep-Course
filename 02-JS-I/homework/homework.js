@@ -108,7 +108,7 @@ function esPar(num) {
   // Devuelve "true" si "num" es par
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (num % 2 = 0) {
+  if (num % 2 === 0) {
     return true;
   }
   return false;
@@ -195,7 +195,7 @@ function combinarNombres(nombre, apellido) {
   // Devuelve "nombre" y "apellido" combinados en una string y separados por un espacio.
   // Ejemplo: "Soy", "Henry" -> "Soy Henry"
   // Tu código:
-  var combinarNombres = nombre + '' + apellido;
+  var combinarNombres = nombre + ' ' + apellido;
   return combinarNombres;
 }
 
@@ -246,7 +246,7 @@ function esVocal(letra){
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
-  if (letra === 'a' || 'e' || 'i' || 'o' || 'u') {
+  if (letra === 'a' || letra === 'e' || letra === 'i' || letra === 'o' || letra === 'u') {
     var vocal = 'Es vocal';
     return vocal;
   }

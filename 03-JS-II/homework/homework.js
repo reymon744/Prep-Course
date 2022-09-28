@@ -83,19 +83,15 @@ function colors(color) {
   //Usar el statement Switch.
   switch (color) {
     case 'blue':
-      console.log('This is blue');
-      break;
+      return 'This is blue';
     case 'red':
-      console.log('This is red');
-      break;
+      return 'This is red';
     case 'green':
-      console.log('This is green');
-      break;
+      return 'This is green';
     case 'orange':
-      console.log('This is orange');
-      break;
+      return 'This is orange';
     default:
-      console.log('Color not found');
+      return 'Color not found';
 
   }
 }
@@ -116,7 +112,7 @@ function estaEnRango(numero) {
   // Devuelve "true" si "numero" es menor que 50 y mayor que 20
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (numero < 50 || numero > 20) {
+  if (numero < 50 && numero > 20) {
     return true;
   }
   else {
@@ -145,17 +141,17 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 5, devuelve "buzz"
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
-  if (numero % 3 === 0) {
-    var fizz ='fizz';
-    return fizz;
+  if (numero % 15 === 0) {
+    var fizzbuzz ='fizzbuzz';
+    return fizzbuzz;
   }
   else if (numero % 5 === 0) {
     var buzz ='buzz';
     return buzz;
   }
-  else if (numero % 3 === 0 && numero % 5 === 0) {
-    var fizzbuzz ='fizzbuzz';
-    return fizzbuzz;
+  else if (numero % 3 === 0) {
+    var fizz ='fizz';
+    return fizz;
   }
   else {
     return numero;
@@ -169,22 +165,23 @@ function operadoresLogicos(num1, num2, num3) {
   //Si num3 es más grande que num1 y num2, aumentar su valor en 1 y retornar el nuevo valor.
   //0 no es ni positivo ni negativo. Si alguno de los argumentos es 0, retornar "Error".
   //Si no se cumplen ninguna de las condiciones anteriores, retornar false. 
-  if (num1 > num2 && num1 > num3 && num1 > 0) {
-    var  numeroMayorPositivo = 'Número 1 es mayor y positivo';
-    return numeroMayorPositivo;
-  }
-  else if (num1 < 0 || num2 < 0 || num3 < 0) {
+  if (num1 < 0 || num2 < 0 || num3 < 0) {
     var hayNegativos = 'Hay negativos';
     return hayNegativos;
   }
-  else if (num3 > num1 && num3 > num2) {
-    var  valorMasUno = num3++;
-    return valorMasUno;
-  }
   else if (num1 === 0 || num2 === 0 || num3 === 0) {
-    var error = 'error';
+    var error = 'Error';
     return error;
   }
+  else if (num1 > num2 && num1 > num3 && num1 > 0) {
+    var  numeroMayorPositivo = 'Número 1 es mayor y positivo';
+    return numeroMayorPositivo;
+  }
+  else if (num3 > num1 && num3 > num2) {
+    var  valorMasUno = num3 + 1;
+    return valorMasUno;
+  }
+  
   else {
     return false;
   }
@@ -218,9 +215,9 @@ function esVerdadero(valor){
   //si su valor es true y “Soy falso” si su valor es false.
   //Escribe tu código aquí
   if (valor === true) {
-    return "Soy Verdadero";
+    return "Soy verdadero";
   }
-    return "Soy Falso";
+    return "Soy falso";
   
 }
 
@@ -228,6 +225,7 @@ function tablaDelSeis(){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí   
+  let arrayTabla6 = []
   for (let i = 0; i < 11; i++) {
     arrayTabla6.push(6 * i)
   }

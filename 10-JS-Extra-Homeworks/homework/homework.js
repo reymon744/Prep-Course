@@ -10,6 +10,8 @@ function deObjetoAmatriz(objeto){
       C: 3
     }) ➞ [["D", 1], ["B", 2], ["C", 3]]*/
   //Escribe tu código aquí
+  var arr = Object.entries(objeto);
+  return arr;
 }
 
 
@@ -18,6 +20,15 @@ function numberOfCharacters(string) {
   //en formato par clave-valor.
   //Ej: Recibe ---> "adsjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 } 
   //Escribe tu código aquí
+  const map = {};
+    for (let i = 0; i < string.length; ++i) {
+      if (string[i] in map)
+        map[string[i]]++;
+      else
+        map[string[i]] = 1;
+    }
+
+    return map;
 }
 
 
@@ -26,6 +37,19 @@ function capToFront(s) {
   //al principio de la palabra.
   //Ejemplo: soyHENRY -> HENRYsoy
   //Escribe tu código aquí
+ 
+  var caps = []; 
+  var lower = []
+  for (var i = 0; i < s.length; i++)
+      {
+          if (s[i] == s[i].toUpperCase()){              
+              caps.push(s[i]);
+          }
+          if (s[i] == s[i].toLowerCase()){
+              lower.push(s[i]);
+          }
+      }
+  return caps.join("").concat(lower.join(""));
 }
 
 
@@ -35,6 +59,8 @@ function asAmirror(str) {
   //pero con cada una de sus palabras invertidas, como si fuera un espejo.
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
+  let reverseWordArr = str.split(" ").map(word => word.split("").reverse().join(""));
+  return reverseWordArr.join(" ");
 } 
 
 
@@ -43,6 +69,7 @@ function capicua(numero){
   //La misma debe retornar: "Es capicua" si el número se número que se lee igual de 
   //izquierda a derecha que de derecha a izquierda. Caso contrario retorna "No es capicua"
   //Escribe tu código aquí
+  
 }
 
 
